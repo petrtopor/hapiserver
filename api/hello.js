@@ -3,11 +3,11 @@ module.exports = function (server, mongoose, logger) {
     method: 'GET',
     path: '/hello-world',
     config: {
-      handler: function(request, h) { return "Hello World" },
+      handler: function(request, h) { return "H3llo W0r1d" }/*,
       tags: ['api'],
       plugins: {
         'hapi-swagger': {}
-      }
+      }*/
     }
   })
 }
