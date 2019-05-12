@@ -8,7 +8,8 @@ async function api(){
     
     let config = {
         appTitle: "My API",
-        apiPath: 'api'
+        apiPath: 'api',
+        enableSwaggerHttps: true
     };
 
     await server.register({
