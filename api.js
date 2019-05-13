@@ -2,14 +2,16 @@ let Hapi = require('hapi')
 let mongoose = require('mongoose')
 let RestHapi = require('rest-hapi')
 
-async function api(){
+async function api() {
   try {
-    let server = Hapi.Server({ port: 8080 })
+    const serverOptions = {
+      port: 8080
+    }
+
+    let server = Hapi.Server(serverOptions)
     
     let config = {
-        appTitle: "My API",
-        apiPath: 'api',
-        enableSwaggerHttps: true
+      appTitle: "My API"
     };
 
     await server.register({
