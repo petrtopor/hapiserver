@@ -5,7 +5,7 @@ let RestHapi = require('rest-hapi')
 async function api() {
   try {
     const serverOptions = {
-      port: 8080
+      port: 80
     }
 
     let server = Hapi.Server(serverOptions)
