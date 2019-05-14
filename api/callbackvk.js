@@ -11,7 +11,9 @@ module.exports = function (server, mongoose, logger) {
           }
           case 'message_new': {
             const object = request.payload['object']
-            console.log('message_new:\n', object['text'])
+            const userId = object['user_id']
+            const text = object['text']
+            console.log('message_new:\t', text, '\nuser_id:\t', userId)
             return 'ok'
           }
           default: {
